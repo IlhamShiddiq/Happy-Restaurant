@@ -197,6 +197,7 @@ h1.rest-name {
 }
 .item img {
     width: 100%;
+    height: 160px;
 }
 p.desc {
     text-align: justify;
