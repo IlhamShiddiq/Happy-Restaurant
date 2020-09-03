@@ -11,15 +11,20 @@
 
 @media screen and (min-width: 845px) {
     .overlay {
+        display: none !important;
+    }
+    /* Navigasi */
+    .mobile-menu {
         display: none;
     }
-
-    /* Navigasi */
     .logo img {
         width: 125px;
     }
     .logo-wrapper {
         width: 355px;
+    }
+    .close {
+        display: none !important;
     }
 
     /* Main */
