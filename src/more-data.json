@@ -1,0 +1,20 @@
+{
+    "info": [
+      {
+        "name": "Good Service",
+        "desc": "Restoran yang berkelas, tidak dilihat dari seberapa mewah menu yang disediakan. Tetapi, dilihat dari seberapa baik dan ramah pelayanan saat pelanggan datang untuk makan",
+        "img": "https://i.imgur.com/hUXRzE0.jpg"
+      },
+      {
+        "name": "Harga Terjangkau",
+        "desc": "Makanan enak tidak selalu didapat dengan membeli dengan harga yang fantastik. Enak dan layak disediakan, merupakan hal utama dalam menghidangkan suatu makanan",
+        "img": "https://i.imgur.com/jWB4lpO.jpg"
+      },
+      {
+        "name": "Bergizi & Sehat",
+        "desc": "Makanan enak merupakan hal penting, tetapi jangan lupa untuk memperhatikan kandungan gizi. Gizi yang baik, berarti makanan yang dihidangkan pun baik",
+        "img": "https://i.imgur.com/oGPT8Ta.jpg"
+      }
+    ]
+  }
+  

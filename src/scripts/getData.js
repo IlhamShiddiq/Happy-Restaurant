@@ -13,7 +13,7 @@ const get = () => {
                     <h1 class="rest-name">${restData[i].name}</h1>
                     <div class="info-item">
                         <div class="img-item">
-                            <img src="${restData[i].pictureId}" alt="">
+                            <img src="${restData[i].pictureId}" alt="${restData[i].name}">
                             <div class="city">Kota ${restData[i].city}</div>
                         </div>
                         <p class="desc">${descLimited} ...</p>
