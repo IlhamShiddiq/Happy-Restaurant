@@ -10,15 +10,15 @@ const get = () => {
         let descLimited = desc.substr(0, 200);
         content += `
                 <div class="item">
-                    <h1 class="rest-name">${restData[i].name}</h1>
+                    <h1 class="rest-name t-center">${restData[i].name}</h1>
                     <div class="info-item">
                         <div class="img-item">
                             <img src="${restData[i].pictureId}" alt="${restData[i].name}">
-                            <div class="city">Kota ${restData[i].city}</div>
+                            <div class="city white-text">Kota ${restData[i].city}</div>
                         </div>
                         <p class="desc">${descLimited} ...</p>
                     </div>
-                    <h1 class="rating">&#9733; ${restData[i].rating}</h1>
+                    <h1 class="rating t-center">&#9733; ${restData[i].rating}</h1>
                 </div>
         `;
     }
