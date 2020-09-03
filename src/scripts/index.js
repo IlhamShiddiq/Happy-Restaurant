@@ -6,6 +6,7 @@ import getInfo from './getInfo.js';
 
 // CSS
 import '../styles/main.css';
+import '../styles/responsive.css';
 import '../styles/font.css';
 
 get();

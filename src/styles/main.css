@@ -10,6 +10,15 @@ body {
 .m-auto {
     margin: auto;
 }
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+}
 ::-webkit-scrollbar {
     width: 10px;
 } 
@@ -62,10 +71,10 @@ li.nav-item a {
     z-index: 1;
 }
 .logo img {
-    width: 125px;
+    width: 100px;
 }
 .logo-wrapper {
-    width: 355px;
+    width: 280px;
     padding-top: 90px;
     background-color: rgb(255, 255, 255, 0.8);
     padding-bottom: 20px;
@@ -87,7 +96,6 @@ li.nav-item a {
 }
 .sub-hero {
     width: 100%;
-    height: 275px;
     background-color: black;
     margin: 1px 0;
     padding-bottom: 30px;
@@ -95,12 +103,12 @@ li.nav-item a {
 .sub-hero-img {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
 }
 .img-sub-hero {
-    height: 200px;
-    margin: 0 30px;
-    margin-top: -80px;
+    height: 310px;
+    margin: 0 0px;
+    margin-top: 20px;
 }
 .img-sub-hero h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -130,28 +138,26 @@ li.nav-item a {
     left: 0;
 }
 .hero-title {
-    width: 45%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 13px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-top-left-radius: 30px;
+    padding: 13px 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
 }
 .hero-title h1 {
     font-size: 23px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
 }
-
 .wrapper-content {
     width: 100%;
     background-color: black;
 }
-
 .content {
-    width: 70%;
+    width: 80%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     padding: 30px 0;
 }
 .item {
@@ -205,15 +211,15 @@ h1.rating {
     padding-bottom: 30px;
 }
 .sub-imgs {
-    width: 80%;
+    width: 100%;
     height: 300px;
     animation: ani-bg 8s linear infinite;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
     background-size: cover;
 }
 .note {
-    width: 50%;
+    width: 80%;
     margin-top: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
