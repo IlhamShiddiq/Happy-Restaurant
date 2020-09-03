@@ -38,6 +38,26 @@ body {
     background: rgb(78, 1, 1);
 }
 
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    width: 150px;
+    top: -70px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+    z-index: 100;
+    text-decoration: none;
+    border: 0px black solid !important;
+}
+  
+.skip-link:focus {
+    top: 83px;
+}
+
 /* Navbar */
 .mobile-menu {
     position: absolute;
