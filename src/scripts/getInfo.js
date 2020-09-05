@@ -9,7 +9,7 @@ const getInfo = () => {
         content += `
                 <div class="img-sub-hero">
                     <div class="img-hero-item m-auto" id="i-hero-2">
-                        <img src="${infoData[i].img}" alt="${infoData[i].name}">
+                        <img src="images/info/${infoData[i].img}" alt="${infoData[i].name}">
                     </div>
                     <h1 class="white-text t-center">${infoData[i].name}</h1>
                     <p class="white-text">${infoData[i].desc}</p>

@@ -63,19 +63,33 @@ body {
     position: absolute;
     top: 0; left: 0;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     z-index: 10;
     background-color: black;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+h1.brand-name-mobile {
+    display: inline-block;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 21px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 p.hamburger {
-    min-width: 44px;
-    min-height: 44px;
     text-align: right;
-    margin-right: 30px;
 }
 a#hamburger {
     text-decoration: none;
     color: white;
     font-size: 28px;
+}
+a.hamb {
+    display: inline-block;
+    text-align: center;
+    min-width: 44px;
+    min-height: 44px;
 }
 nav.nav {
     position: absolute;
@@ -84,6 +98,9 @@ nav.nav {
     background-color: black;
     z-index: 100 !important;
     padding: 8px 0;
+}
+h1.brand-name {
+    display: none;
 }
 ul.nav-list {
     margin: 0px;

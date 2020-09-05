@@ -10,6 +10,22 @@
 }
 
 @media screen and (min-width: 845px) {
+    nav.nav {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        box-sizing: border-box;
+        padding: 7px 75px;
+    }
+    h1.brand-name {
+        display: inline-block;
+        margin: 0;
+        margin-top: 13px;
+        font-size: 23px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    ul.nav-list {
+        text-align: right;
+    }
     .overlay {
         display: none !important;
     }
