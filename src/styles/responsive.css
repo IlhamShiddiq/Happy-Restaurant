@@ -4,7 +4,6 @@
         width: 65%;
     }
     .content {
-        width: 90%;
         grid-template-columns: repeat(2, 1fr);
     }
 }
