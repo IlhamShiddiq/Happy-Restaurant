@@ -149,6 +149,11 @@ li.nav-item a {
     text-align: right !important;
     margin-bottom: 20px;
 }
+a#close {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
 
 /* Main */
 .hero {
