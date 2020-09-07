@@ -85,6 +85,9 @@ a#hamburger {
     color: white;
     font-size: 28px;
 }
+a#hamburger:hover {
+    color: rgb(77, 77, 77);
+}
 a.hamb {
     display: inline-block;
     text-align: center;
