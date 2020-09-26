@@ -1,3 +1,8 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable import/no-useless-path-segments */
+/* eslint-disable no-plusplus */
+/* eslint-disable indent */
+
 import info from './../more-data.json';
 
 const getInfo = () => {
@@ -5,7 +10,7 @@ const getInfo = () => {
     const wrap = document.querySelector('#sub-hero-img');
     let content = '';
 
-    for(let i = 0; i < infoData.length; i++) {
+    for (let i = 0; i < infoData.length; i++) {
         content += `
                 <div class="img-sub-hero">
                     <div class="img-hero-item m-auto" id="i-hero-2">
@@ -16,8 +21,8 @@ const getInfo = () => {
                 </div>
         `;
     }
-    
+
     wrap.innerHTML = content;
-}
+};
 
 export default getInfo;

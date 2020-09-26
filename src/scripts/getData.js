@@ -1,3 +1,9 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable prefer-const */
+/* eslint-disable import/no-useless-path-segments */
+/* eslint-disable no-plusplus */
+/* eslint-disable indent */
+
 import data from './../DATA.json';
 
 const get = () => {
@@ -5,7 +11,7 @@ const get = () => {
     const wrap = document.querySelector('.content');
     let content = '';
 
-    for(let i = 0; i < data.restaurants.length; i++) {
+    for (let i = 0; i < data.restaurants.length; i++) {
         let desc = restData[i].description;
         let descLimited = desc.substr(0, 200);
         content += `
@@ -22,8 +28,8 @@ const get = () => {
                 </div>
         `;
     }
-    
+
     wrap.innerHTML = content;
-}
+};
 
 export default get;
