@@ -111,7 +111,7 @@ ul.nav-list {
 li.nav-item {
     display: inline-block;
     padding: 0 25px;
-    margin: 0 10px;
+    margin: 0 0;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -175,6 +175,7 @@ a#close {
     background-color: black;
     margin: 1px 0;
     padding-bottom: 30px;
+    border-bottom: 1px solid white;
 }
 .sub-hero-img {
     width: 80%;
@@ -304,6 +305,24 @@ span.quote {
     font-weight: bold;
     font-size: 20px;
 }
+.button-review {
+    width: 100%;
+    text-align: center !important;
+    margin: 40px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a.btn-review {
+    margin: auto !important;
+    text-decoration: none;
+    text-align: center !important;
+    background-color: rgb(134, 2, 2);
+    padding: 15px 60px;
+    border-radius: 30px;
+    color: white;
+}
+a.btn-review:hover {
+    animation: review-hover .8s forwards;
+}
 
 /* Footer */
 footer {
@@ -328,5 +347,13 @@ footer {
     }
     51% {
         background-image: url('./images/heros/hero-image_2.jpg');
+    }
+}
+@keyframes review-hover {
+    0% {
+        background-color: rgb(134, 2, 2);
+    }
+    100% {
+        background-color: rgb(61, 3, 3);
     }
 }

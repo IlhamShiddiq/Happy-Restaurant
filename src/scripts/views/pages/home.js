@@ -1,5 +1,13 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
+/* eslint-disable no-console */
 /* eslint-disable indent */
+
+import RestaurantsSource from '../../data/restaurants-source';
+import { restaurantTemplate, moreInfo } from '../templates/template-creator';
+import info from '../../../more-data.json';
 
 const Home = {
     async render() {
@@ -9,8 +17,11 @@ const Home = {
                     
                 </div>
             </div>
-            <div class="content m-auto">
-                nnn
+            <div class="content m-auto" id="content">
+                
+            </div>
+            <div class="button-review text-center">
+                <a class="btn-review" href="#/add-review">Add Review</a>
             </div>
             <div class="imgs">
                 <div class="sub-imgs m-auto"></div>
@@ -20,7 +31,19 @@ const Home = {
     },
 
     async afterRender() {
-        // Fungsi ini akan dipanggil setelah render()
+        const wrap = document.querySelector('#sub-hero-img');
+        const infonya = info.info;
+        const listContainer = document.querySelector('#content');
+
+        const lists = await RestaurantsSource.ListRestaurants();
+        console.log(lists);
+
+        infonya.forEach((infoMore) => {
+            wrap.innerHTML += moreInfo(infoMore);
+        });
+        lists.forEach((list) => {
+            listContainer.innerHTML += restaurantTemplate(list);
+        });
     },
 };
 

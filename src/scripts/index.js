@@ -34,6 +34,6 @@ window.addEventListener('load', () => {
     app.renderPage();
 });
 
-get();
-getInfo();
+// get();
+// getInfo();
 console.log('Hello Coders! :)');
