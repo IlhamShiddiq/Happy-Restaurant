@@ -20,9 +20,18 @@ import '../styles/font.css';
 const app = new App({
     button: document.querySelector('#hamburger'),
     drawer: document.querySelector('#drawer'),
+    content: document.querySelector('#main-content'),
     overlay: document.querySelector('#overlay'),
     close: document.querySelector('#close'),
     body: document.querySelector('body'),
+});
+
+window.addEventListener('hashchange', () => {
+    app.renderPage();
+});
+
+window.addEventListener('load', () => {
+    app.renderPage();
 });
 
 get();
