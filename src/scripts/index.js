@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-unused-vars */
 /* eslint-disable indent */
 /* eslint-disable import/no-unresolved */
@@ -16,6 +17,10 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import '../styles/mobile-navigation.css';
 import '../styles/font.css';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 
 const app = new App({
     button: document.querySelector('#hamburger'),

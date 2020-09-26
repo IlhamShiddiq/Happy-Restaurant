@@ -6,6 +6,9 @@
     .content {
         grid-template-columns: repeat(2, 1fr);
     }
+    .about-us {
+        padding: 50px 80px;
+    }
 }
 
 @media screen and (min-width: 845px) {
@@ -78,6 +81,9 @@
     .note {
         width: 50%;
     }
+    .about-us {
+        padding: 50px 250px;
+    }
 }
 
 @media screen and (min-width: 1100px) {
@@ -93,5 +99,8 @@
     }
     .content {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .about-us {
+        padding: 50px 380px;
     }
 }

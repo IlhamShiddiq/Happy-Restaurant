@@ -7,8 +7,14 @@ body {
 .t-center {
     text-align: center;
 }
+.t-right {
+    text-align: right;
+}
 .m-auto {
     margin: auto;
+}
+.d-inline-block {
+    display: inline-block !important;
 }
 .overlay {
     position: absolute;
@@ -321,6 +327,35 @@ a.btn-review {
     color: white;
 }
 a.btn-review:hover {
+    animation: review-hover .8s forwards;
+}
+.about-us {
+    padding: 50px 30px;
+    border-top: 5px solid rgb(134, 2, 2);
+}
+.my-photo img {
+    border-radius: 100%;
+}
+.about-me p.about {
+    line-height: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.about-me p.find-me {
+    font-family: daisy;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+.about-me .socmed {
+    width: 50px;
+    height: 50px;
+    padding-top: 13px;
+    background-color: rgb(134, 2, 2);
+    border-radius: 100%;
+    margin: 0 3px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+.about-me .my-socmed .socmed:hover {
     animation: review-hover .8s forwards;
 }
 
