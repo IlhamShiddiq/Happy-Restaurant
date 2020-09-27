@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: black;
 }
 .white-text {
     color: white;
@@ -246,7 +247,8 @@ a#close {
 .item {
     background-color: #fff;
     margin: 10px 15px;
-    padding: 0px 17px;
+    padding: 0 17px;
+    padding-bottom: 15px;
 }
 h1.rest-name {
     font-family: daisy;
@@ -289,6 +291,18 @@ h1.rating {
     color: rgb(134, 2, 2);
     border-top: 2px solid rgb(134, 2, 2);
 }
+.detail-btn {
+    padding: 5px 40px;
+    background-color: rgb(134, 2, 2);
+    color: white;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.detail-btn:hover {
+    animation: review-hover .8s forwards;
+}
 .imgs {
     width: 100%;
     padding-bottom: 30px;
@@ -329,6 +343,8 @@ a.btn-review {
 a.btn-review:hover {
     animation: review-hover .8s forwards;
 }
+
+/* About Us Page */
 .about-us {
     padding: 50px 30px;
     border-top: 5px solid rgb(134, 2, 2);
@@ -357,6 +373,103 @@ a.btn-review:hover {
 }
 .about-me .my-socmed .socmed:hover {
     animation: review-hover .8s forwards;
+}
+
+/* Detail Page */
+.detail {
+    padding: 50px 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    row-gap: 15px;
+    margin-top: -250px;
+}
+.detail-photo {
+    position: relative;
+}
+.detail-photo img {
+    width: 100%;
+}
+.detail-rate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px 15px 10px;
+    background-color: rgb(134, 2, 2);
+    color: white;
+    font-size: 15px;
+    border-bottom-right-radius: 30px;
+}
+.info-restaurant {
+    margin-top: -20px;
+}
+h1.detail-rest-name {
+    font-family: daisy;
+    font-size: 40px;
+}
+.kategori {
+    margin-top: -20px;
+}
+.list-kategori {
+    padding: 5px 20px;
+    background-color: rgb(134, 2, 2);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    margin: 0 2px;
+}
+p.detail-desc {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.detail-address {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    background-color: rgb(134, 2, 2);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.menus table {
+    width: 90%;
+    color: rgb(216, 216, 216) !important;
+}
+.menus table tr td {
+    border-bottom: 1px solid rgb(165, 165, 165);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.menus table tr td h1 {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 23px;
+}
+.title-review {
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.detail-reviews {
+    padding: 30px 20px;
+    margin-top: -60px;
+}
+.list-review {
+    background-color: rgb(134, 2, 2);
+    padding: 10px 50px;
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+}
+.list-review p {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.list-review p.nama-review {
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.list-review p.waktu-review {
+    margin-top: 15px;
+    font-size: 13px;
 }
 
 /* Footer */

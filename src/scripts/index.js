@@ -8,8 +8,7 @@
 import 'regenerator-runtime';
 
 // JS
-import get from './getData.js';
-import getInfo from './getInfo.js';
+
 import App from './views/app';
 
 // CSS
@@ -39,6 +38,4 @@ window.addEventListener('load', () => {
     app.renderPage();
 });
 
-// get();
-// getInfo();
 console.log('Hello Coders! :)');

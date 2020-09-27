@@ -9,6 +9,9 @@
     .about-us {
         padding: 50px 80px;
     }
+    .detail {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (min-width: 845px) {
@@ -84,6 +87,19 @@
     .about-us {
         padding: 50px 250px;
     }
+    .detail {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 150px;
+    }
+    .info-restaurant {
+        margin-top: -50px;
+    }
+    .detail-rate {
+        font-size: 17px;
+    }
+    .detail-reviews {
+        padding: 30px 150px;
+    }
 }
 
 @media screen and (min-width: 1100px) {
@@ -102,5 +118,15 @@
     }
     .about-us {
         padding: 50px 380px;
+    }
+    .detail {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 150px;
+    }
+    .detail-rate {
+        font-size: 20px;
+    }
+    .detail-reviews {
+        padding: 30px 230px;
     }
 }

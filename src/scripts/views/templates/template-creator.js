@@ -8,27 +8,30 @@
 
 import CONFIG from '../../globals/config';
 
-const detailTemplate = (movie) => `
+const detailTemplate = (restaurant) => `
   <h1>ILHAM</h1>
 `;
 
-const restaurantTemplate = (movie) => {
-    let desc = movie.description;
+const restaurantTemplate = (restaurant) => {
+    let desc = restaurant.description;
     let descLimited = desc.substr(0, 200);
-    return item(movie, descLimited);
+    return item(restaurant, descLimited);
 };
 
-const item = (movie, descLimited) => `
+const item = (restaurant, descLimited) => `
     <div class="item">
-        <h1 class="rest-name t-center">${movie.name}</h1>
+        <h1 class="rest-name t-center">${restaurant.name}</h1>
         <div class="info-item">
             <div class="img-item">
-                <img src="${CONFIG.BASE_IMAGE_URL + movie.pictureId}" alt="${movie.name}">
-                <div class="city white-text">Kota ${movie.city}</div>
+                <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
+                <div class="city white-text">Kota ${restaurant.city}</div>
             </div>
             <p class="desc">${descLimited} ...</p>
         </div>
-        <h1 class="rating t-center">&#9733; ${movie.rating}</h1>
+        <h1 class="rating t-center">&#9733; ${restaurant.rating}</h1>
+        <div class="t-center">
+            <a href="#/detail/${restaurant.id}" class="detail-btn">Detail</a>
+        </div>
     </div>
 `;
 
