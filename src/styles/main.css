@@ -102,7 +102,7 @@ a.hamb {
     min-height: 44px;
 }
 nav.nav {
-    position: absolute;
+    position: fixed;
     top: 0; left: 0;
     width: 100%;
     background-color: black;
@@ -473,6 +473,41 @@ p.detail-desc {
     font-size: 13px;
 }
 
+/* Button Up */
+.btn-top {
+    position: fixed;
+    bottom: -70px;
+    right: 80px;
+    padding: 20px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(134, 2, 2);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+.btn-top:hover {
+    animation: review-hover .8s forwards;
+    bottom: 0;
+}
+.btn-top:focus {
+    outline: none;
+    bottom: 0;
+}
+.show-btn {
+    animation: btn-top .5s forwards;
+}
+.hide-btn {
+    animation: btn-top-hide .5s forwards;
+}
+.show-nav {
+    animation: nav-top .5s forwards;
+}
+.hide-nav {
+    animation: nav-top-hide .5s forwards;
+}
+
 /* Footer */
 footer {
     width: 100%;
@@ -504,5 +539,37 @@ footer {
     }
     100% {
         background-color: rgb(61, 3, 3);
+    }
+}
+@keyframes btn-top {
+    0% {
+        bottom: -70px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+@keyframes btn-top-hide {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: -70px;
+    }
+}
+@keyframes nav-top {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -70px;
+    }
+}
+@keyframes nav-top-hide {
+    0% {
+        top: -70px;
+    }
+    100% {
+        top: 0;
     }
 }

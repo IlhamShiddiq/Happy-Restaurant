@@ -8,8 +8,8 @@
 import 'regenerator-runtime';
 
 // JS
-
 import App from './views/app';
+import './utils/btn-action';
 
 // CSS
 import '../styles/main.css';
