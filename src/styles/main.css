@@ -457,6 +457,7 @@ p.detail-desc {
     padding: 10px 50px;
     border-radius: 30px;
     border-bottom-left-radius: 0;
+    margin-top: 10px;
 }
 .list-review p {
     margin: 0;

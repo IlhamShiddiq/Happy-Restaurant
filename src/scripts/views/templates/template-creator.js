@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable object-curly-spacing */
+/* eslint-disable object-curly-newline */
 /* eslint-disable prefer-const */
 /* eslint-disable no-use-before-define */
 /* eslint-disable indent */
@@ -8,8 +10,56 @@
 
 import CONFIG from '../../globals/config';
 
-const detailTemplate = (restaurant) => `
-  <h1>ILHAM</h1>
+const categoryTemplate = (restaurant) => `
+                                    <div class="list-kategori d-inline-block">${restaurant.name}</div>
+`;
+
+const foodsTemplate = (food) => `
+                                <tr> <td>&#9900; ${food.name}</td> </tr>
+`;
+
+const reviewTemplate = (review) => `
+                                <div class="list-review">
+                                    <p class="nama-review">${review.name}</p>
+                                    <p class="detail-desc">${review.review}</p>
+                                    <p class="waktu-review"><i class="far fa-clock"></i> ${review.date}</p>
+                                </div>
+`;
+
+const detailTemplate = (restaurant, kategori, foods, drinks) => `
+                                <div class="detail m-auto">
+                                    <div class="restaurant-photo t-center">
+                                        <div class="detail-photo">
+                                            <img src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}">
+                                            <div class="detail-rate">
+                                                &#9733; ${restaurant.rating}
+                                            </div>
+                                            <div class="detail-address white-text">
+                                                <p><i class="fas fa-map-marker-alt"></i> &nbsp;${restaurant.address}, ${restaurant.city}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info-restaurant white-text">
+                                        <h1 class="detail-rest-name">${restaurant.name}</h1>
+                                        <div class="kategori">
+                                            ${kategori}
+                                        </div>
+                                        <p class="detail-desc">
+                                        ${restaurant.description} </p>
+                                    </div>
+                                    <div class="foods-menu menus white-text">
+                                        <table cellpadding="8">
+                                            <tr> <td><h1 class="title-menu"><i class="fas fa-hamburger"></i> Food Menus<h1></td> </tr>
+                                            ${foods}
+                                        </table>
+                                    </div>
+                                    <div class="drinks-menu menus white-text">
+                                        <table cellpadding="8">
+                                            <tr> <td><h1 class="title-menu"><i class="fas fa-coffee"></i> Drink Menus<h1></td> </tr>
+                                            ${drinks}
+                                        </table>
+                                    </div>
+                                </div>
 `;
 
 const restaurantTemplate = (restaurant) => {
@@ -45,4 +95,5 @@ const moreInfo = (info) => `
                 </div>
 `;
 
-export { detailTemplate, restaurantTemplate, moreInfo };
+export { detailTemplate, restaurantTemplate, moreInfo, categoryTemplate, foodsTemplate,
+    reviewTemplate};

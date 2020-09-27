@@ -88,7 +88,7 @@
         padding: 50px 250px;
     }
     .detail {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         padding: 50px 150px;
     }
     .info-restaurant {
@@ -99,6 +99,9 @@
     }
     .detail-reviews {
         padding: 30px 150px;
+    }
+    .info-restaurant {
+        margin-top: -20px;
     }
 }
 
