@@ -15,6 +15,9 @@
 }
 
 @media screen and (min-width: 845px) {
+    span.andro-icon {
+        display: none;
+    }
     nav.nav {
         display: grid;
         grid-template-columns: 1fr 2fr;
