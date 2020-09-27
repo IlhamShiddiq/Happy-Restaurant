@@ -1,5 +1,9 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable import/no-extraneous-dependencies */
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 
 module.exports = {
@@ -44,5 +48,22 @@ module.exports = {
         },
       ],
     }),
+    new WebpackPwaManifest({
+      name: 'HappyRestaurant - Restaurant Catalogue',
+      short_name: 'HappyRestaurant',
+      description: 'All about great restaurants',
+      start_url: '/index.html',
+      display: 'standalone',
+      background_color: '#ffffff',
+      crossorigin: 'use-credentials',
+      theme_color: '#d84315',
+      icons: [
+        {
+          src: path.resolve('src/public/images/happy-restaurant.png'),
+          sizes: [96, 128, 192, 256, 384, 512],
+          destination: path.join('icons', 'android')
+        },
+      ]
+    })
   ],
 };
