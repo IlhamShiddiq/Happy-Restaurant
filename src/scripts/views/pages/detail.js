@@ -52,6 +52,8 @@ const Detail = {
                 description: restaurant.restaurant.description,
                 menus: restaurant.restaurant.menus,
                 consumerReviews: restaurant.restaurant.consumerReviews,
+                city: restaurant.restaurant.city,
+                rating: restaurant.restaurant.rating,
             },
         });
 
