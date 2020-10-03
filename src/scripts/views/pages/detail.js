@@ -14,7 +14,12 @@ const Detail = {
     async render() {
         return `
             <div class="detail-container">
-                
+                <div class="load-indicator">
+                    <div class="load-item" id="load-1"></div>
+                    <div class="load-item" id="load-2"></div>
+                    <div class="load-item" id="load-3"></div>
+                    <div class="load-item" id="load-4"></div>
+                </div>
             </div>
             <div class="detail-reviews white-text">
                 <h1 class="t-center title-review">Apa Kata Orang?</h1>

@@ -12,6 +12,14 @@ import info from '../../../more-data.json';
 const Home = {
     async render() {
         return `
+            <div class="load-container">
+                <div class="load-indicator">
+                    <div class="load-item" id="load-1"></div>
+                    <div class="load-item" id="load-2"></div>
+                    <div class="load-item" id="load-3"></div>
+                    <div class="load-item" id="load-4"></div>
+                </div>
+            </div>
             <div class="sub-hero">
                 <div class="sub-hero-img m-auto" id="sub-hero-img">
                     
@@ -34,6 +42,7 @@ const Home = {
         const wrap = document.querySelector('#sub-hero-img');
         const infonya = info.info;
         const listContainer = document.querySelector('#content');
+        const loadContainer = document.querySelector('.load-indicator');
 
         const lists = await RestaurantsSource.ListRestaurants();
         console.log(lists);
@@ -44,6 +53,7 @@ const Home = {
         lists.forEach((list) => {
             listContainer.innerHTML += restaurantTemplate(list);
         });
+        loadContainer.innerHTML = '';
     },
 };
 
