@@ -16,10 +16,11 @@ import swRegister from './service-worker/sw-register';
 
 // CSS
 import '../styles/main.css';
-import '../styles/responsive.css';
 import '../styles/mobile-navigation.css';
 import '../styles/font.css';
 import '../styles/load-indicator.css';
+import '../styles/input.css';
+import '../styles/responsive.css';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';

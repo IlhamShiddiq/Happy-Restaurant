@@ -1,0 +1,96 @@
+.content-add-review {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.form-wrapper {
+    width: 85%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.title-review {
+    position: relative;
+    background-color: #fff;
+    width: 98%;
+    height: 2px;
+    margin-bottom: 30px;
+}
+
+.title-review h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    text-align: left;
+    background-color: rgb(134, 2, 2);
+    padding: 5px 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 5px;
+    margin: 0;
+    font-size: 28px;
+}
+
+.form-group {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.form-group .input {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group .input:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.review-btn {
+    text-align: left;
+}
+
+.form-group button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: none;
+    background-color: rgb(134, 2, 2);
+    padding: 8px 55px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 5px;
+    margin-top: 25px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    animation: review-hover .8s forwards;
+}
+
+.line-button {
+    position: relative;
+    background-color: #fff;
+    width: 98%;
+    height: 2px;
+    margin-top: 35px;
+}
+
+.label {
+    text-align: left;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}

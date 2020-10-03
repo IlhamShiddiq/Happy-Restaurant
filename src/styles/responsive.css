@@ -12,6 +12,9 @@
     .detail {
         grid-template-columns: 1fr;
     }
+    .form-wrapper {
+        width: 70%;
+    }
 }
 
 @media screen and (min-width: 845px) {
@@ -106,6 +109,9 @@
     .info-restaurant {
         margin-top: -20px;
     }
+    .form-wrapper {
+        width: 60%;
+    }
 }
 
 @media screen and (min-width: 1100px) {
@@ -134,6 +140,9 @@
     }
     .detail-reviews {
         padding: 30px 230px;
+    }
+    .form-wrapper {
+        width: 45%;
     }
 }
 
