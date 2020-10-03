@@ -1,3 +1,5 @@
+/* eslint-disable import/first */
+/* eslint-disable no-undef */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-unused-vars */
 /* eslint-disable indent */
@@ -10,6 +12,7 @@ import 'regenerator-runtime';
 // JS
 import App from './views/app';
 import './utils/btn-action';
+import swRegister from './service-worker/sw-register';
 
 // CSS
 import '../styles/main.css';
@@ -36,6 +39,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
     app.renderPage();
+    swRegister();
 });
 
 console.log('Hello Coders! :)');

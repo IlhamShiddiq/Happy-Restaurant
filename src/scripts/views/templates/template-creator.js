@@ -30,7 +30,7 @@ const detailTemplate = (restaurant, kategori, foods, drinks) => `
                                 <div class="detail m-auto">
                                     <div class="restaurant-photo t-center">
                                         <div class="detail-photo">
-                                            <img src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}">
+                                            <img src="${CONFIG.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" crossorigin="anonymous">
                                             <div class="detail-rate">
                                                 &#9733; ${restaurant.rating}
                                             </div>
@@ -73,7 +73,7 @@ const item = (restaurant, descLimited) => `
         <h1 class="rest-name t-center">${restaurant.name}</h1>
         <div class="info-item">
             <div class="img-item">
-                <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
+                <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
                 <div class="city white-text">Kota ${restaurant.city}</div>
             </div>
             <p class="desc">${descLimited} ...</p>

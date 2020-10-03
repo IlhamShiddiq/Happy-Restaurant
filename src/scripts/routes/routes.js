@@ -10,6 +10,7 @@ import AboutUs from '../views/pages/about-us';
 
 const routes = {
   '/': Home,
+  '/home': Home,
   '/add-review': AddReview,
   '/detail/:id': Detail,
   '/favorite': Favorite,
