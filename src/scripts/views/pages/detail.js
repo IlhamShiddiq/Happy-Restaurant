@@ -7,7 +7,8 @@
 
 import UrlParser from '../../routes/url-parser';
 import RestaurantsSource from '../../data/restaurants-source';
-import { detailTemplate, categoryTemplate, foodsTemplate, reviewTemplate } from '../templates/template-creator';
+import { detailTemplate, categoryTemplate, foodsTemplate, reviewTemplate, createLikeButtonTemplate } from '../templates/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
     async render() {
@@ -24,6 +25,7 @@ const Detail = {
                     
                 </div>
             </div>
+            <div id="likeButtonContainer"></div>
             
         `;
     },
@@ -39,6 +41,19 @@ const Detail = {
         let foods = '';
         let drinks = '';
         console.log(restaurant.restaurant);
+
+        LikeButtonInitiator.init({
+            likeButtonContainer: document.querySelector('#likeButtonContainer'),
+            restaurant: {
+                id: restaurant.restaurant.id,
+                pictureId: restaurant.restaurant.pictureId,
+                name: restaurant.restaurant.name,
+                categories: restaurant.restaurant.categories,
+                description: restaurant.restaurant.description,
+                menus: restaurant.restaurant.menus,
+                consumerReviews: restaurant.restaurant.consumerReviews,
+            },
+        });
 
         restaurant.restaurant.categories.forEach((categori) => {
             category += categoryTemplate(categori);

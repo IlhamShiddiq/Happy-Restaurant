@@ -95,5 +95,17 @@ const moreInfo = (info) => `
                 </div>
 `;
 
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this movie" class="btn-like" id="likeButton">
+    <i class="far fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this movie" class="btn-like" id="likeButton">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
 export { detailTemplate, restaurantTemplate, moreInfo, categoryTemplate, foodsTemplate,
-    reviewTemplate};
+    reviewTemplate, createLikeButtonTemplate, createLikedButtonTemplate};

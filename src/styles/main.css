@@ -508,6 +508,30 @@ p.detail-desc {
     animation: nav-top-hide .5s forwards;
 }
 
+
+/* Button Like */
+.btn-like {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    padding: 20px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(134, 2, 2);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+.btn-like:hover {
+    animation: review-hover .8s forwards;
+    bottom: 0;
+}
+.btn-like:focus {
+    outline: none;
+    bottom: 0;
+}
+
 /* Footer */
 footer {
     width: 100%;
