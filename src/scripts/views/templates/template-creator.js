@@ -62,29 +62,6 @@ const detailTemplate = (restaurant, kategori, foods, drinks) => `
                                 </div>
 `;
 
-const restaurantTemplate = (restaurant) => {
-    let desc = restaurant.description;
-    let descLimited = desc.substr(0, 200);
-    return item(restaurant, descLimited);
-};
-
-const item = (restaurant, descLimited) => `
-    <div class="item">
-        <h1 class="rest-name t-center">${restaurant.name}</h1>
-        <div class="info-item">
-            <div class="img-item">
-                <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous">
-                <div class="city white-text">Kota ${restaurant.city}</div>
-            </div>
-            <p class="desc">${descLimited} ...</p>
-        </div>
-        <h1 class="rating t-center">&#9733; ${restaurant.rating}</h1>
-        <div class="t-center">
-            <a href="#/detail/${restaurant.id}" class="detail-btn">Detail</a>
-        </div>
-    </div>
-`;
-
 const moreInfo = (info) => `
                 <div class="img-sub-hero">
                     <div class="img-hero-item m-auto" id="i-hero-2">
@@ -107,5 +84,5 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
-export { detailTemplate, restaurantTemplate, moreInfo, categoryTemplate, foodsTemplate,
+export { detailTemplate, moreInfo, categoryTemplate, foodsTemplate,
     reviewTemplate, createLikeButtonTemplate, createLikedButtonTemplate};

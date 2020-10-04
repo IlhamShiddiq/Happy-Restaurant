@@ -256,6 +256,7 @@ h1.rest-name {
     font-family: daisy;
     font-size: 25px;
     padding-bottom: 10px;
+    padding-top: 10px;
     color: rgb(134, 2, 2);
     border-bottom: 2px solid rgb(134, 2, 2);
 }

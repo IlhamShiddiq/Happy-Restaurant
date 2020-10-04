@@ -11,6 +11,7 @@ import 'regenerator-runtime';
 
 // JS
 import swRegister from './service-worker/sw-register';
+import './views/component/components';
 import App from './views/app';
 import './utils/btn-action';
 

@@ -37,7 +37,7 @@ const Detail = {
                             <div class="label">
                                 <label>Review</label>
                             </div>
-                            <textarea class="input" id="review" rows="3" autocomplete="off"></textarea>
+                            <textarea class="input" id="review" rows="3" placeholder="Input review.."  autocomplete="off"></textarea>
                         </div>
                         <div cLass="form-group review-btn">
                             <div class="line-button">
@@ -120,6 +120,9 @@ const Detail = {
             const reviewUser = document.getElementById('review').value;
 
             addReview({ id: restaurant.id, name: name, review: reviewUser });
+
+            document.getElementById('name').value = '';
+            document.getElementById('review').value = '';
         });
     },
 

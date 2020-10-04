@@ -6,7 +6,7 @@
 /* eslint-disable indent */
 
 import RestaurantsSource from '../../data/restaurants-source';
-import { restaurantTemplate, moreInfo } from '../templates/template-creator';
+import { moreInfo } from '../templates/template-creator';
 import info from '../../../more-data.json';
 
 const Home = {
@@ -59,7 +59,15 @@ const Home = {
             wrap.innerHTML += moreInfo(infoMore);
         });
         lists.forEach((listRest) => {
-            listContainer.innerHTML += restaurantTemplate(listRest);
+            const desc = listRest.description;
+            const descLimited = desc.substr(0, 200);
+            console.log(descLimited);
+
+            const listItem = document.createElement('card-item');
+            listItem.descLimited = descLimited;
+            listItem.data = listRest;
+
+            listContainer.appendChild(listItem);
         });
         loadContainer.innerHTML = '';
     },
