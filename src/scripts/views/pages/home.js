@@ -54,6 +54,9 @@ const Home = {
         const loadContainer = loadCon;
         const wrap = wrapCon;
         const listContainer = document.querySelector('#content');
+        const ttileHero = document.querySelector('#title-hero');
+
+        ttileHero.innerHTML = 'Most Wonderful Restaurant';
 
         infonya.forEach((infoMore) => {
             wrap.innerHTML += moreInfo(infoMore);

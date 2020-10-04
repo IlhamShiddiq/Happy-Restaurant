@@ -1,9 +1,9 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable import/named */
 /* eslint-disable import/no-useless-path-segments */
 /* eslint-disable indent */
 
 import FavoriteRestaurantIdb from '../../data/database';
-import { restaurantTemplate } from '../../views/templates/template-creator';
 
 const Favorite = {
     async render() {
@@ -26,10 +26,20 @@ const Favorite = {
         const restaurant = await FavoriteRestaurantIdb.getAllRestaurants();
         const contentContainer = document.querySelector('#content');
         const loadContainer = document.querySelector('.load-indicator');
+        const ttileHero = document.querySelector('#title-hero');
 
-        restaurant.forEach((item) => {
-            contentContainer.innerHTML = '';
-            contentContainer.innerHTML += restaurantTemplate(item);
+        ttileHero.innerHTML = 'Favorite Restaurant';
+
+        contentContainer.innerHTML = '';
+        restaurant.forEach((listRest) => {
+            const desc = listRest.description;
+            const descLimited = desc.substr(0, 200);
+
+            const listItem = document.createElement('card-item');
+            listItem.descLimited = descLimited;
+            listItem.data = listRest;
+
+            contentContainer.appendChild(listItem);
         });
         loadContainer.innerHTML = '';
     },

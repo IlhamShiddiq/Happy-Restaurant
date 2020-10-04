@@ -24,7 +24,8 @@ const AboutUs = {
     },
 
     async afterRender() {
-        // Fungsi ini akan dipanggil setelah render()
+        const ttileHero = document.querySelector('#title-hero');
+        ttileHero.innerHTML = 'About Us';
     },
 };
 
