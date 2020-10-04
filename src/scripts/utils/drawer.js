@@ -5,7 +5,15 @@
 /* eslint-disable no-underscore-dangle */
 
 const DrawerInitiator = {
-    init({ button, drawer, overlay, close, body }) {
+    init({ item, button, drawer, overlay, close, body }) {
+        item.forEach((navitem) => {
+            navitem.addEventListener('click', (event) => {
+                drawer.classList.remove('open');
+                overlay.classList.remove('show');
+                body.classList.remove('of-hidden');
+            });
+        });
+
         button.addEventListener('click', (event) => {
             this._toggleDrawer(event, drawer, overlay, body);
         });

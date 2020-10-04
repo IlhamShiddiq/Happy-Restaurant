@@ -28,9 +28,6 @@ const Home = {
             <div class="content m-auto" id="content">
                 
             </div>
-            <div class="button-review text-center">
-                <a class="btn-review" href="#/add-review">Add Review</a>
-            </div>
             <div class="imgs">
                 <div class="sub-imgs m-auto"></div>
                 <div class="note white-text m-auto t-center"><span class="quote">"</span> Invariably the food is tasty and well prepared. The fare is appropriate for the price point and market it’s aimed at. It’s essential that patrons feel they’ve had a good, enjoyable meal. <span class="quote">"</span></div>
@@ -39,21 +36,40 @@ const Home = {
     },
 
     async afterRender() {
-        const wrap = document.querySelector('#sub-hero-img');
-        const infonya = info.info;
-        const listContainer = document.querySelector('#content');
         const loadContainer = document.querySelector('.load-indicator');
+        const wrap = document.querySelector('#sub-hero-img');
 
         const lists = await RestaurantsSource.ListRestaurants();
-        console.log(lists);
+
+        if (lists) {
+            this.successRequest(lists, loadContainer, wrap);
+        } else {
+            this.failedRequest(loadContainer, wrap);
+        }
+    },
+
+    async successRequest(list, loadCon, wrapCon) {
+        const infonya = info.info;
+        const lists = list;
+        const loadContainer = loadCon;
+        const wrap = wrapCon;
+        const listContainer = document.querySelector('#content');
 
         infonya.forEach((infoMore) => {
             wrap.innerHTML += moreInfo(infoMore);
         });
-        lists.forEach((list) => {
-            listContainer.innerHTML += restaurantTemplate(list);
+        lists.forEach((listRest) => {
+            listContainer.innerHTML += restaurantTemplate(listRest);
         });
         loadContainer.innerHTML = '';
+    },
+
+    async failedRequest(loadCon, wrapCon) {
+        const loadContainer = loadCon;
+        const wrap = wrapCon;
+
+        loadContainer.innerHTML = '';
+        wrap.innerHTML = '<p class="no-entry">Maaf, request tidak dapat dijalankan karena terdapat kesalahan.</p>';
     },
 };
 

@@ -12,7 +12,8 @@ import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
 class App {
-    constructor({ button, drawer, content, overlay, close, body }) {
+    constructor({ item, button, drawer, content, overlay, close, body }) {
+        this._item = item;
         this._button = button;
         this._drawer = drawer;
         this._content = content;
@@ -25,6 +26,7 @@ class App {
 
     _initialAppShell() {
         DrawerInitiator.init({
+            item: this._item,
             button: this._button,
             drawer: this._drawer,
             overlay: this._overlay,

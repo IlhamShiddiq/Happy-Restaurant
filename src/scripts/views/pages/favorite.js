@@ -17,7 +17,7 @@ const Favorite = {
                 </div>
             </div>
             <div class="content m-auto" id="content">
-            
+                <p class="no-entry">Tidak ada daftar</p>
             </div>
         `;
     },
@@ -28,6 +28,7 @@ const Favorite = {
         const loadContainer = document.querySelector('.load-indicator');
 
         restaurant.forEach((item) => {
+            contentContainer.innerHTML = '';
             contentContainer.innerHTML += restaurantTemplate(item);
         });
         loadContainer.innerHTML = '';

@@ -67,52 +67,70 @@ const Detail = {
     async afterRender() {
         const url = UrlParser.parseActiveUrlWithoutCombiner();
         const restaurant = await RestaurantsSource.detailRestaurant(url.id);
-
         const detailContainer = document.querySelector('.detail-container');
+
+        if (restaurant) {
+            this.successFetch(restaurant, detailContainer);
+        } else {
+            this.failedFetch(detailContainer);
+        }
+    },
+
+    async successFetch(restaurant, detailContainer) {
+        const detail = detailContainer;
         const reviewContainer = document.querySelector('#review-list');
         const btnReview = document.querySelector('#btn-add-review');
 
         let category = '';
         let foods = '';
         let drinks = '';
-        console.log(restaurant.restaurant);
 
         LikeButtonInitiator.init({
             likeButtonContainer: document.querySelector('#likeButtonContainer'),
             restaurant: {
-                id: restaurant.restaurant.id,
-                pictureId: restaurant.restaurant.pictureId,
-                name: restaurant.restaurant.name,
-                categories: restaurant.restaurant.categories,
-                description: restaurant.restaurant.description,
-                menus: restaurant.restaurant.menus,
-                consumerReviews: restaurant.restaurant.consumerReviews,
-                city: restaurant.restaurant.city,
-                rating: restaurant.restaurant.rating,
+                id: restaurant.id,
+                pictureId: restaurant.pictureId,
+                name: restaurant.name,
+                categories: restaurant.categories,
+                description: restaurant.description,
+                menus: restaurant.menus,
+                consumerReviews: restaurant.consumerReviews,
+                city: restaurant.city,
+                rating: restaurant.rating,
             },
         });
 
-        restaurant.restaurant.categories.forEach((categori) => {
+        restaurant.categories.forEach((categori) => {
             category += categoryTemplate(categori);
         });
-        restaurant.restaurant.menus.foods.forEach((food) => {
+        restaurant.menus.foods.forEach((food) => {
             foods += foodsTemplate(food);
         });
-        restaurant.restaurant.menus.drinks.forEach((drink) => {
+        restaurant.menus.drinks.forEach((drink) => {
             drinks += foodsTemplate(drink);
         });
-        restaurant.restaurant.consumerReviews.forEach((review) => {
+        restaurant.consumerReviews.forEach((review) => {
             reviewContainer.innerHTML += reviewTemplate(review);
         });
 
-        detailContainer.innerHTML = detailTemplate(restaurant.restaurant, category, foods, drinks);
+        detail.innerHTML = detailTemplate(restaurant, category, foods, drinks);
 
         btnReview.addEventListener('click', () => {
             const name = document.getElementById('name').value;
             const reviewUser = document.getElementById('review').value;
 
-            addReview({ id: restaurant.restaurant.id, name: name, review: reviewUser });
+            addReview({ id: restaurant.id, name: name, review: reviewUser });
         });
+    },
+
+    async failedFetch(detailContainer) {
+        const detail = detailContainer;
+        const reviewContainer = document.querySelector('.content-add-review');
+        const reviewDetail = document.querySelector('.detail-reviews');
+
+        detail.innerHTML = '<p class="failed-request">Maaf, request tidak dapat dijalankan karena terdapat kesalahan.</p>';
+        reviewContainer.innerHTML = '';
+        reviewDetail.innerHTML = '';
     },
 };
 

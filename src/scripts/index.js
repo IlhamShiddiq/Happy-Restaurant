@@ -27,6 +27,7 @@ import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
 const app = new App({
+    item: [document.querySelector('#nav-item-1'), document.querySelector('#nav-item-2'), document.querySelector('#nav-item-3')],
     button: document.querySelector('#hamburger'),
     drawer: document.querySelector('#drawer'),
     content: document.querySelector('#main-content'),
