@@ -10,9 +10,9 @@
 import 'regenerator-runtime';
 
 // JS
+import swRegister from './service-worker/sw-register';
 import App from './views/app';
 import './utils/btn-action';
-import swRegister from './service-worker/sw-register';
 
 // CSS
 import '../styles/main.css';

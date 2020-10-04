@@ -5,6 +5,7 @@ const CONFIG = {
     BASE_URL: 'https://dicoding-restaurant-api.el.r.appspot.com/',
     BASE_IMAGE_URL: 'https://dicoding-restaurant-api.el.r.appspot.com/images/small/',
     BASE_IMAGE_URL_MEDIUM: 'https://dicoding-restaurant-api.el.r.appspot.com/images/medium/',
+    URL_ADD_REVIEW: 'https://dicoding-restaurant-api.el.r.appspot.com/review',
     DEFAULT_LANGUAGE: 'en-us',
     CACHE_NAME: {
         prefix: 'app-shell',

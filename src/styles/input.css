@@ -1,6 +1,5 @@
 .content-add-review {
     text-align: center;
-    padding: 50px 0;
 }
 
 .form-wrapper {
@@ -9,7 +8,7 @@
     padding-top: 50px;
 }
 
-.title-review {
+.title-add-review {
     position: relative;
     background-color: #fff;
     width: 98%;
@@ -17,7 +16,7 @@
     margin-bottom: 30px;
 }
 
-.title-review h1 {
+.title-add-review h1 {
     position: absolute;
     bottom: 0;
     left: 0;

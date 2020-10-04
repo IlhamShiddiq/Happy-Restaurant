@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable import/no-cycle */
+/* eslint-disable object-shorthand */
 /* eslint-disable object-curly-newline */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-useless-path-segments */
@@ -9,6 +11,7 @@ import UrlParser from '../../routes/url-parser';
 import RestaurantsSource from '../../data/restaurants-source';
 import { detailTemplate, categoryTemplate, foodsTemplate, reviewTemplate, createLikeButtonTemplate } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
+import addReview from './../../utils/add-review';
 
 const Detail = {
     async render() {
@@ -21,11 +24,31 @@ const Detail = {
                     <div class="load-item" id="load-4"></div>
                 </div>
             </div>
+            <div class="content-add-review m-auto">
+                <div class="form-wrapper">
+                    <div class="title-add-review">
+                        <h1>Add Review</h1>
+                    </div>
+                    <form>
+                        <div cLass="form-group">
+                            <input type="text" class="input" id="name" placeholder="Input name.." autocomplete="off">
+                        </div>
+                        <div cLass="form-group">
+                            <div class="label">
+                                <label>Review</label>
+                            </div>
+                            <textarea class="input" id="review" rows="3" autocomplete="off"></textarea>
+                        </div>
+                        <div cLass="form-group review-btn">
+                            <div class="line-button">
+                                <button class="btn-review" id="btn-add-review">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div class="detail-reviews white-text">
                 <h1 class="t-center title-review">Apa Kata Orang?</h1>
-                <div class="button-review text-center">
-                    <a class="btn-review" href="#/add-review">Add Review</a>
-                </div>
                 <div id="review-list">
                     
                 </div>
@@ -35,12 +58,19 @@ const Detail = {
         `;
     },
 
+    async renderAfterAddReview() {
+        const reviewContainer = document.querySelector('#review-list');
+        reviewContainer.innerHTML = '';
+        this.afterRender();
+    },
+
     async afterRender() {
         const url = UrlParser.parseActiveUrlWithoutCombiner();
         const restaurant = await RestaurantsSource.detailRestaurant(url.id);
 
         const detailContainer = document.querySelector('.detail-container');
         const reviewContainer = document.querySelector('#review-list');
+        const btnReview = document.querySelector('#btn-add-review');
 
         let category = '';
         let foods = '';
@@ -76,6 +106,13 @@ const Detail = {
         });
 
         detailContainer.innerHTML = detailTemplate(restaurant.restaurant, category, foods, drinks);
+
+        btnReview.addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const reviewUser = document.getElementById('review').value;
+
+            addReview({ id: restaurant.restaurant.id, name: name, review: reviewUser });
+        });
     },
 };
 
