@@ -1,14 +1,13 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable prefer-const */
 /* eslint-disable no-console */
 
 import $ from 'jquery';
 
-let btn = document.getElementById('btn-top');
-let nav = document.getElementById('drawer');
+const btn = document.getElementById('btn-top');
+const nav = document.getElementById('drawer');
 
 window.addEventListener('scroll', () => {
-  let vertical = window.scrollY;
+  const vertical = window.scrollY;
 
   if (vertical < 250) {
     btn.classList.remove('show-btn');

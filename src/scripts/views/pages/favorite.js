@@ -1,13 +1,10 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable import/named */
-/* eslint-disable import/no-useless-path-segments */
-/* eslint-disable indent */
 
 import FavoriteRestaurantIdb from '../../data/database';
 
 const Favorite = {
-    async render() {
-        return `
+  async render() {
+    return `
             <div class="load-container">
                 <div class="load-indicator">
                     <div class="load-item" id="load-1"></div>
@@ -20,29 +17,29 @@ const Favorite = {
                 <p class="no-entry">Tidak ada daftar</p>
             </div>
         `;
-    },
+  },
 
-    async afterRender() {
-        const restaurant = await FavoriteRestaurantIdb.getAllRestaurants();
-        const contentContainer = document.querySelector('#content');
-        const loadContainer = document.querySelector('.load-indicator');
-        const ttileHero = document.querySelector('#title-hero');
+  async afterRender() {
+    const restaurant = await FavoriteRestaurantIdb.getAllRestaurants();
+    const contentContainer = document.querySelector('#content');
+    const loadContainer = document.querySelector('.load-indicator');
+    const ttileHero = document.querySelector('#title-hero');
 
-        ttileHero.innerHTML = 'Favorite Restaurant';
+    ttileHero.innerHTML = 'Favorite Restaurant';
 
-        contentContainer.innerHTML = '';
-        restaurant.forEach((listRest) => {
-            const desc = listRest.description;
-            const descLimited = desc.substr(0, 200);
+    contentContainer.innerHTML = '';
+    restaurant.forEach((listRest) => {
+      const desc = listRest.description;
+      const descLimited = desc.substr(0, 200);
 
-            const listItem = document.createElement('card-item');
-            listItem.descLimited = descLimited;
-            listItem.data = listRest;
+      const listItem = document.createElement('card-item');
+      listItem.descLimited = descLimited;
+      listItem.data = listRest;
 
-            contentContainer.appendChild(listItem);
-        });
-        loadContainer.innerHTML = '';
-    },
+      contentContainer.appendChild(listItem);
+    });
+    loadContainer.innerHTML = '';
+  },
 };
 
 export default Favorite;

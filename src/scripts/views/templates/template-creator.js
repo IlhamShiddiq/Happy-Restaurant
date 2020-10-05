@@ -1,12 +1,4 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable object-curly-spacing */
-/* eslint-disable object-curly-newline */
-/* eslint-disable prefer-const */
-/* eslint-disable no-use-before-define */
-/* eslint-disable indent */
-/* eslint-disable arrow-body-style */
-/* eslint-disable quotes */
-/* eslint-disable no-unused-vars */
 
 import CONFIG from '../../globals/config';
 
@@ -84,5 +76,12 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
-export { detailTemplate, moreInfo, categoryTemplate, foodsTemplate,
-    reviewTemplate, createLikeButtonTemplate, createLikedButtonTemplate};
+export {
+  detailTemplate,
+  moreInfo,
+  categoryTemplate,
+  foodsTemplate,
+  reviewTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+};

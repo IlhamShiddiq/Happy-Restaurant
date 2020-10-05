@@ -1,21 +1,20 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-underscore-dangle */
-/* eslint-disable indent */
 
 import CONFIG from '../../globals/config';
 
 class Card extends HTMLElement {
-    set data(data) {
-        this._data = data;
-        this.render();
-    }
+  set data(data) {
+    this._data = data;
+    this.render();
+  }
 
-    set descLimited(descLimited) {
-        this._descLimited = descLimited;
-    }
+  set descLimited(descLimited) {
+    this._descLimited = descLimited;
+  }
 
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
             <div class="item">
                 <h1 class="rest-name t-center">${this._data.name}</h1>
                 <div class="info-item">
@@ -31,7 +30,7 @@ class Card extends HTMLElement {
                 </div>
             </div>
         `;
-    }
+  }
 }
 
 customElements.define('card-item', Card);

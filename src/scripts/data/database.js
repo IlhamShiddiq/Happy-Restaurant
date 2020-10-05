@@ -1,5 +1,4 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable no-unused-vars */
 
 import { openDB } from 'idb';
 import CONFIG from '../globals/config';

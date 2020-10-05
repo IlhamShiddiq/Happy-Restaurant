@@ -1,9 +1,8 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable indent */
 
 class Navbar extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
             <nav id="drawer" class="nav">
                 <div class="name">
                     <h1 class="white-text brand-name">HappyRestaurant</h1>
@@ -16,7 +15,7 @@ class Navbar extends HTMLElement {
                 </ul>
             </nav>
         `;
-    }
+  }
 }
 
 customElements.define('nav-bar', Navbar);

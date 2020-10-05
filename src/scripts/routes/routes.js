@@ -1,6 +1,4 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
 
 import Home from '../views/pages/home';
 import Detail from '../views/pages/detail';

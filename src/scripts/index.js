@@ -1,11 +1,6 @@
 /* eslint-disable import/first */
-/* eslint-disable no-undef */
 /* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable no-unused-vars */
-/* eslint-disable indent */
-/* eslint-disable import/no-unresolved */
 /* eslint-disable no-console */
-/* eslint-disable import/extensions */
 
 import 'regenerator-runtime';
 
@@ -28,22 +23,22 @@ import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
 const app = new App({
-    item: [document.querySelector('#nav-item-1'), document.querySelector('#nav-item-2'), document.querySelector('#nav-item-3')],
-    button: document.querySelector('#hamburger'),
-    drawer: document.querySelector('#drawer'),
-    content: document.querySelector('#main-content'),
-    overlay: document.querySelector('#overlay'),
-    close: document.querySelector('#close'),
-    body: document.querySelector('body'),
+  item: [document.querySelector('#nav-item-1'), document.querySelector('#nav-item-2'), document.querySelector('#nav-item-3')],
+  button: document.querySelector('#hamburger'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('#main-content'),
+  overlay: document.querySelector('#overlay'),
+  close: document.querySelector('#close'),
+  body: document.querySelector('body'),
 });
 
 window.addEventListener('hashchange', () => {
-    app.renderPage();
+  app.renderPage();
 });
 
 window.addEventListener('load', () => {
-    app.renderPage();
-    swRegister();
+  app.renderPage();
+  swRegister();
 });
 
 console.log('Hello Coders! :)');
