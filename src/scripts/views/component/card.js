@@ -26,7 +26,7 @@ class Card extends HTMLElement {
                 </div>
                 <h1 class="rating t-center">&#9733; ${this._data.rating}</h1>
                 <div class="t-center">
-                    <a href="#/detail/${this._data.id}" class="detail-btn">Detail</a>
+                    <a href="#/detail/${this._data.id}" class="detail-btn">DETAIL</a>
                 </div>
             </div>
         `;

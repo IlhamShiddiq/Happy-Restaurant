@@ -56,6 +56,7 @@
 
 .review-btn {
     text-align: left;
+    margin-top: 50px;
 }
 
 .form-group button {
@@ -64,12 +65,11 @@
     left: 0;
     border: none;
     background-color: rgb(134, 2, 2);
-    padding: 8px 55px;
+    padding: 13px 55px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 5px;
-    margin-top: 25px;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
 }
