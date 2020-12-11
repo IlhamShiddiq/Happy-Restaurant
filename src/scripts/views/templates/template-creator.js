@@ -65,13 +65,13 @@ const moreInfo = (info) => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" class="btn-like" id="likeButton">
+  <button aria-label="like this restaurant" class="btn-like" id="likeButton">
     <i class="far fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" class="btn-like" id="likeButton">
+  <button aria-label="unlike this restaurant" class="btn-like" id="likeButton">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;

@@ -27,17 +27,19 @@ const Favorite = {
 
     ttileHero.innerHTML = 'Favorite Restaurant';
 
-    contentContainer.innerHTML = '';
-    restaurant.forEach((listRest) => {
-      const desc = listRest.description;
-      const descLimited = desc.substr(0, 200);
+    if (restaurant.length !== 0) {
+      contentContainer.innerHTML = '';
+      restaurant.forEach((listRest) => {
+        const desc = listRest.description;
+        const descLimited = desc.substr(0, 200);
 
-      const listItem = document.createElement('card-item');
-      listItem.descLimited = descLimited;
-      listItem.data = listRest;
+        const listItem = document.createElement('card-item');
+        listItem.descLimited = descLimited;
+        listItem.data = listRest;
 
-      contentContainer.appendChild(listItem);
-    });
+        contentContainer.appendChild(listItem);
+      });
+    }
     loadContainer.innerHTML = '';
   },
 };
