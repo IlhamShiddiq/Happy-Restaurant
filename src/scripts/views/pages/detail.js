@@ -105,7 +105,7 @@ const Detail = {
     restaurant.menus.drinks.forEach((drink) => {
       drinks += foodsTemplate(drink);
     });
-    restaurant.consumerReviews.forEach((review) => {
+    restaurant.customerReviews.forEach((review) => {
       reviewContainer.innerHTML += reviewTemplate(review);
     });
 
