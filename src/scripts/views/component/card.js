@@ -19,7 +19,8 @@ class Card extends HTMLElement {
                 <h1 class="rest-name t-center">${this._data.name}</h1>
                 <div class="info-item">
                     <div class="img-item">
-                        <img src="${CONFIG.BASE_IMAGE_URL + this._data.pictureId}" alt="${this._data.name}" crossorigin="anonymous">
+                        <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL + this._data.pictureId}" alt="${this._data.name}" crossorigin="anonymous">
+                        
                         <div class="city white-text">Kota ${this._data.city}</div>
                     </div>
                     <p class="desc">${this._descLimited} ...</p>

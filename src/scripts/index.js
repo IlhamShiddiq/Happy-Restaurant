@@ -9,6 +9,8 @@ import swRegister from './service-worker/sw-register';
 import './views/component/components';
 import App from './views/app';
 import './utils/btn-action';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 // CSS
 import '../styles/main.css';
